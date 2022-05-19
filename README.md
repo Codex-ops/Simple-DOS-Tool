@@ -1,3 +1,3 @@
-# FakePinger
+# DOS Tool
 
-Makes .bat file that crashes a windows devies
+Sends a ping every 0.2 seconds with threading that attemps to take off a server
