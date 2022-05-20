@@ -18,7 +18,7 @@ os.system(CLEAR)
 ip = input("Enter IP ---> ")
 
 #function
-print("CRTL + Z to exit")
+print("CRTL + Z to stop" + "CTRL + C to exit")
 
 while True:
   print(f'Flooding {ip} with {MAX} packet(s).')
